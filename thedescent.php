@@ -4,27 +4,27 @@
  * the standard input according to the problem statement.
  **/
 
-
-// game loop
 while (TRUE)
 {
     fscanf(STDIN, "%d %d",
         $SX,
         $SY
     );
+    $tab=array();
     for ($i = 0; $i < 8; $i++)
     {
         fscanf(STDIN, "%d",
             $MH 
         );
-        if($MH>0){
-            $val=$i;
-        }
+    $tab[]=$MH;
     }
-    if($SX===$val){
-    echo("FIRE\n"); 
+    $max=max($tab);
+    $cle=array_search($max,$tab);
+    if($SX== $cle){
+        echo("FIRE\n");
     }else{
         echo("HOLD\n");
     }
+    
 }
 ?>
