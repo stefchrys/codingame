@@ -14,17 +14,23 @@ $T = stream_get_line(STDIN, 256, "\n");
 //--------------------------------------------
 //tableau
 $alphab=array();
-$alphabMin=array();
+
 $place=1;
 for($i='A';$i<='Z';$i++){
     $alphab[$i]=$place;
-    $place++;if($place==27){break;}
+    $place++;if($place==27){
+        break;
+        
+    }
 }
 $place=1;
 for($i='a';$i<='z';$i++){
     $alphab[$i]=$place;
     $place++;
-    if($place==53){break;}
+    if($place==53){
+        break;
+        
+    }
 }
 
 
